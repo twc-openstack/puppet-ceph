@@ -75,7 +75,7 @@ define ceph::mon (
       Service {
         name     => "ceph-mon-${id}",
         # workaround for bug https://projects.puppetlabs.com/issues/23187
-        provider => 'init',
+        provider => 'debian',
         start    => "start ceph-mon id=${id}",
         stop     => "stop ceph-mon id=${id}",
         status   => "status ceph-mon id=${id}",
